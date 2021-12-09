@@ -77,11 +77,11 @@
 
 				if (locationX > boardWidth) {
 					shinra = shinra * -1;
-
-				} else if (locationX < 0) {
+				} 
+				else if (locationX < 0) {
 					shinra = shinra * -1;
 				}
-
+				
 
 			};
 
@@ -92,7 +92,12 @@
 			*/
 			function handleBoxClick() {
 				changeBoxText(points = points + 1)
-				shinra = shinra + 3;
+				if (shinra < 0){
+					shinra = shinra - 5 
+				 } 
+				 else if (shinra >= 0){
+					shinra = shinra + 5
+				 }
 				locationX = 0
 
 
